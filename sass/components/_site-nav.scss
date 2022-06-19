@@ -1,18 +1,23 @@
 .site-nav {
-  display: none;
+  position: absolute;
   left: 0;
   top: 0;
   width: 100%;
+  padding: 48px 40px;
+
   @extend %list-style;
   background-color: $main-bg-color;
   // margin-left: 93px;
 }
 
 .site-nav__link {
-  @extend %fonts__site-nav-contacts;
+  // @extend %fonts__site-nav-contacts;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
 
-  display: block;
-  padding: 32px 0;
+  // padding: 32px 0;
   color: $title-text-color;
   text-decoration: none;
 
@@ -40,7 +45,8 @@
   position: relative;
 
   &:not(:last-child) {
-    margin-right: 50px;
+    margin-bottom: 32px;
+    // margin-right: 50px;
   }
 }
 
