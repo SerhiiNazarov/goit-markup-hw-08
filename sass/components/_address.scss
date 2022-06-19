@@ -1,0 +1,39 @@
+.address {
+  @extend %list-style;
+
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.address__item:not(:first-child) {
+  margin-top: 8px;
+}
+
+.address__text,
+.address__link {
+  @extend %fonts-text;
+
+  font-style: normal;
+  text-decoration: none;
+}
+
+.address__text {
+  @extend %indentations;
+
+  color: $main-bg-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.address__link {
+  color: rgba(255, 255, 255, 0.6);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}

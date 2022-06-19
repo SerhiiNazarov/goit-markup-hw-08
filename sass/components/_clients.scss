@@ -1,0 +1,42 @@
+.clients {
+  @extend %list-style;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.clients__item {
+  margin: 15px;
+  width: calc((100% - 4 * 15px) / 2);
+}
+
+.clients__link {
+  @include centeredflex();
+
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  // width: 170px;
+
+  text-decoration: none;
+
+  color: #afb1b8;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+}
+
+.clients__icon {
+  @include transition();
+
+  fill: currentColor;
+  border: none;
+
+  .clients__link:hover &,
+  .clients__link:focus & {
+    color: $accent-color;
+  }
+}

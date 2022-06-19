@@ -1,0 +1,20 @@
+.backdrop {
+  @include transition($type: opacity);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+
+  z-index: 2;
+
+  &--is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: visible;
+  }
+}

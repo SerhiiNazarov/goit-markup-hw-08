@@ -1,0 +1,24 @@
+.social {
+  margin-bottom: 60px;
+  // margin-left: 70px;
+}
+
+.social__link {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social__title {
+  @extend %indentations;
+  @extend %fonts-title;
+
+  color: $main-bg-color;
+  margin-bottom: 20px;
+}
+
+.social__icon {
+  fill: $main-bg-color;
+}
+
+.social__list-icons {
+  margin: 0;
+}

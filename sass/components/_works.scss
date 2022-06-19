@@ -1,0 +1,38 @@
+.works {
+  @extend %list-style;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.works__item {
+  position: relative;
+  flex-basis: calc((100% - 60px) / 3);
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.works__image {
+  @extend %img;
+}
+
+.works__content {
+  @include centeredflex();
+
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  height: 70px;
+
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.works__title {
+  @extend %indentations;
+  @extend %fonts-title;
+
+  color: $main-bg-color;
+}

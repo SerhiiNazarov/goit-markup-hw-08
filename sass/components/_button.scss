@@ -1,0 +1,22 @@
+.button {
+  @include transition($type: background-color);
+
+  border-radius: 4px;
+  padding: 10px 32px;
+  border: 1px solid transparent;
+  cursor: pointer;
+
+  color: $main-bg-color;
+  background-color: $accent-color;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+}

@@ -1,0 +1,11 @@
+.page-footer {
+  padding: 60px 0;
+
+  background-color: $background-black-color;
+
+  &__container {
+    text-align: center;
+    //  align-items: baseline;
+    // display: flex;
+  }
+}

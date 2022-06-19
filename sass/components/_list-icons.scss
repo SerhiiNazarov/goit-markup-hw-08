@@ -1,0 +1,39 @@
+.list-icons {
+  @extend %list-style;
+  @include centeredflex();
+}
+
+// .list-icons__item:not(:last-child) {
+//   margin-right: 10px;
+// }
+
+.list-icons__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.list-icons__link {
+  @include transition($type: background-color);
+  @include centeredflex();
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  text-decoration: none;
+
+  color: #afb1b8;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+  }
+}
+
+.list-icons__icon {
+  @include transition();
+
+  fill: currentColor;
+
+  .list-icons__link:hover &,
+  .list-icons__link:focus & {
+    color: $main-bg-color;
+  }
+}
