@@ -1,8 +1,7 @@
 .contacts {
-  position: absolute;
   @extend %list-style;
-  left: 0;
-  top: 500%;
+  // left: 0;
+  // top: 500%;
   width: 100%;
 
   background-color: $main-bg-color;
@@ -19,9 +18,9 @@
   fill: currentColor;
 }
 
-.contacts__item:not(:last-child) {
-  margin-right: 50px;
-}
+// .contacts__item:not(:last-child) {
+//   margin-right: 50px;
+// }
 
 .contacts__link {
   // @extend %fonts__site-nav-contacts;

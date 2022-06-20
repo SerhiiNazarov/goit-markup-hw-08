@@ -16,7 +16,7 @@
   padding: 0;
 }
 
-.form__label[for="policy"], .features__text, .address__text,
+.features__text, .address__text,
 .address__link {
   font-weight: 400;
   font-size: 14px;
@@ -309,6 +309,10 @@ body {
   letter-spacing: 0.03em;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .page-header {
   position: relative;
   border-bottom: 1px solid #ececec;
@@ -365,7 +369,34 @@ body {
   }
 }
 
-.button-menu {
+.menu {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+  .menu.is-open {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.menu__btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -375,22 +406,25 @@ body {
   background-color: transparent;
 }
 
-.button-menu__icon-cross {
+@media screen and (min-width: 768px) {
+  .menu__btn {
+    display: none;
+  }
+}
+
+.menu__icon-menu {
   display: none;
 }
 
-.button-menu.is-open .button-menu__icon-cross {
+.menu__btn.is-open .menu__icon-menu {
   display: block;
 }
 
-.button-menu.is-open .button-menu__icon-menu {
+.menu__btn.is-open .menu__icon-cross {
   display: none;
 }
 
 .site-nav {
-  position: absolute;
-  left: 0;
-  top: 0;
   width: 100%;
   padding: 48px 40px;
   background-color: #ffffff;
@@ -409,10 +443,6 @@ body {
   color: #2196f3;
 }
 
-.site-nav__item {
-  position: relative;
-}
-
 .site-nav__item:not(:last-child) {
   margin-bottom: 32px;
 }
@@ -422,9 +452,6 @@ body {
 }
 
 .contacts {
-  position: absolute;
-  left: 0;
-  top: 500%;
   width: 100%;
   background-color: #ffffff;
 }
@@ -436,10 +463,6 @@ body {
   background-repeat: no-repeat;
   margin-right: 10px;
   fill: currentColor;
-}
-
-.contacts__item:not(:last-child) {
-  margin-right: 50px;
 }
 
 .contacts__link {
@@ -527,6 +550,7 @@ body {
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
   z-index: 2;
+  overflow-y: scroll;
 }
 
 .backdrop--is-hidden {
@@ -543,7 +567,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 528px;
+  width: 450px;
   padding: 40px;
   background: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -598,7 +622,7 @@ body {
 
 .form {
   text-align: start;
-  width: 448px;
+  width: 370px;
 }
 
 .form__title {
@@ -746,6 +770,9 @@ body {
 }
 
 .form__label[for="policy"] {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

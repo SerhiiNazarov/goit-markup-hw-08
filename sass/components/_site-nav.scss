@@ -1,7 +1,6 @@
 .site-nav {
-  position: absolute;
-  left: 0;
-  top: 0;
+  // left: 0;
+  // top: 0;
   width: 100%;
   padding: 48px 40px;
 
@@ -42,7 +41,7 @@
 }
 
 .site-nav__item {
-  position: relative;
+  // position: relative;
 
   &:not(:last-child) {
     margin-bottom: 32px;

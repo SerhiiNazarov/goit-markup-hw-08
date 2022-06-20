@@ -309,6 +309,10 @@ body {
   letter-spacing: 0.03em;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .page-header {
   position: relative;
   border-bottom: 1px solid #ececec;
@@ -387,9 +391,6 @@ body {
 }
 
 .site-nav {
-  position: absolute;
-  left: 0;
-  top: 0;
   width: 100%;
   padding: 48px 40px;
   background-color: #ffffff;
@@ -408,10 +409,6 @@ body {
   color: #2196f3;
 }
 
-.site-nav__item {
-  position: relative;
-}
-
 .site-nav__item:not(:last-child) {
   margin-bottom: 32px;
 }
@@ -421,9 +418,6 @@ body {
 }
 
 .contacts {
-  position: absolute;
-  left: 0;
-  top: 500%;
   width: 100%;
   background-color: #ffffff;
 }
@@ -435,10 +429,6 @@ body {
   background-repeat: no-repeat;
   margin-right: 10px;
   fill: currentColor;
-}
-
-.contacts__item:not(:last-child) {
-  margin-right: 50px;
 }
 
 .contacts__link {
