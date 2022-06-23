@@ -392,8 +392,10 @@ body.modal-open {
 
 .site-nav {
   width: 100%;
-  padding: 48px 40px;
+  padding-top: 48px;
+  padding-left: 40px;
   background-color: #ffffff;
+  margin-bottom: 305px;
 }
 
 .site-nav__link {
@@ -420,6 +422,12 @@ body.modal-open {
 .contacts {
   width: 100%;
   background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+  padding-left: 40px;
 }
 
 .contacts__icon {

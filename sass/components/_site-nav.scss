@@ -2,11 +2,14 @@
   // left: 0;
   // top: 0;
   width: 100%;
-  padding: 48px 40px;
+  padding-top: 48px;
+  padding-left: 40px;
 
   @extend %list-style;
   background-color: $main-bg-color;
   // margin-left: 93px;
+
+  margin-bottom: 305px;
 }
 
 .site-nav__link {
