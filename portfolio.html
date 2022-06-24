@@ -11,8 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="./css/portfolio.min.css" />
+    <link rel="stylesheet" href="./css/portfolio.css" />
   </head>
 
   <body>
@@ -24,40 +23,78 @@
             <a class="logo" href="./index.html">
               Web<span class="logo--black">Studio</span>
             </a>
-            <ul class="site-nav">
-              <li class="site-nav__item">
-                <a href="./index.html" class="site-nav__link">Студия</a>
-              </li>
-              <li class="site-nav__item">
-                <a
-                  href="./portfolio.html"
-                  class="site-nav__link site-nav__link--activ"
-                  >Портфолио</a
-                >
-              </li>
-              <li class="site-nav__item">
-                <a href="" class="site-nav__link">Контакты</a>
-              </li>
-            </ul>
+            <button
+              type="button"
+              class="menu__btn is-open"
+              aria-expanded="false"
+              aria-controls="menu"
+              data-menu-button
+            >
+              <svg
+                width="40"
+                height="40"
+                aria-label="Переключатель мобильного меню"
+              >
+                <use
+                  class="menu__icon-cross"
+                  href="./images/icons.svg#cross"
+                ></use>
+                <use
+                  class="menu__icon-menu"
+                  href="./images/icons.svg#menu"
+                ></use>
+              </svg>
+            </button>
+            <div class="menu" id="menu" data-menu>
+              <ul class="site-nav">
+                <li class="site-nav__item">
+                  <a href="./index.html" class="site-nav__link">Студия</a>
+                </li>
+                <li class="site-nav__item">
+                  <a
+                    href="./portfolio.html"
+                    class="site-nav__link site-nav__link--activ"
+                    >Портфолио</a
+                  >
+                </li>
+                <li class="site-nav__item">
+                  <a href="" class="site-nav__link">Контакты</a>
+                </li>
+              </ul>
+              <ul class="contacts">
+                <li class="contacts__item">
+                  <a href="mailto:info@devstudio.com" class="contacts__link">
+                    <svg class="contacts__icon" width="16" height="12">
+                      <use href="./images/icons.svg#mail"></use>
+                    </svg>
+                    info@devstudio.com</a
+                  >
+                </li>
+                <li class="contacts__item">
+                  <a href="tel:+380961111111" class="contacts__link">
+                    <svg class="contacts__icon" width="10" height="16">
+                      <use href="./images/icons.svg#phone"></use>
+                    </svg>
+                    +38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+              <ul class="soc-header">
+                <li class="soc-header__item">
+                  <a href="" class="soc-header__link"> Instagram </a>
+                </li>
+                <li class="soc-header__item">
+                  <a href="" class="soc-header__link"> Twitter </a>
+                </li>
+                <li class="soc-header__item">
+                  <a href="" class="soc-header__link"> Facebook </a>
+                </li>
+                <li class="soc-header__item">
+                  <a href="" class="soc-header__link"> LinkedIn </a>
+                </li>
+              </ul>
+            </div>
           </nav>
-          <ul class="contacts">
-            <li class="contacts__item">
-              <a href="mailto:info@devstudio.com" class="contacts__link">
-                <svg class="contacts__icon" width="16" height="12">
-                  <use href="./images/icons.svg#mail"></use>
-                </svg>
-                info@devstudio.com</a
-              >
-            </li>
-            <li class="contacts__item">
-              <a href="tel:+380961111111" class="contacts__link">
-                <svg class="contacts__icon" width="10" height="16">
-                  <use href="./images/icons.svg#phone"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
         </div>
       </div>
     </header>
@@ -92,9 +129,13 @@
               <a href="" class="card-set__link">
                 <div class="product">
                   <img
-                    src="./images/technoquack.jpg"
+                    srcset="
+                      ./images/technoquack-mobile-450.jpg 1x,
+                      ./images/technoquack-mobile-900.jpg 2x
+                    "
+                    src="./images/technoquack-mobile-450.jpg"
                     alt="Веб-сайт"
-                    width="370"
+                    width="450"
                     height="294"
                     class="products__image"
                   />
@@ -117,9 +158,13 @@
               <a href="" class="card-set__link">
                 <div class="product">
                   <img
-                    src="./images/neworlean-vs-golden-star.jpg"
+                    srcset="
+                      ./images/neworlean-mobile-450.jpg 1x,
+                      ./images/neworlean-mobile-900.jpg 2x
+                    "
+                    src="./images/neworlean-mobile-450.jpg"
                     alt="Дизайн"
-                    width="370"
+                    width="450"
                     height="294"
                     class="products__image"
                   />
@@ -144,9 +189,13 @@
               <a href="" class="card-set__link">
                 <div class="product">
                   <img
-                    src="./images/seafood.jpg"
+                    srcset="
+                      ./images/seafood-mobile-450.jpg 1x,
+                      ./images/seafood-mobile-900.jpg 2x
+                    "
+                    src="./images/seafood-mobile-450.jpg"
                     alt="Приложение"
-                    width="370"
+                    width="450"
                     height="294"
                     class="products__image"
                   />
@@ -169,9 +218,13 @@
               <a href="" class="card-set__link">
                 <div class="product">
                   <img
-                    src="./images/prime.jpg"
+                    srcset="
+                      ./images/prime-mobile-450.jpg 1x,
+                      ./images/prime-mobile-900.jpg 2x
+                    "
+                    src="./images/prime-mobile-450.jpg"
                     alt="Маркетинг"
-                    width="370"
+                    width="450"
                     height="294"
                     class="products__image"
                   />
@@ -194,9 +247,13 @@
               <a href="" class="card-set__link">
                 <div class="product">
                   <img
-                    src="./images/boxes.jpg"
+                    srcset="
+                      ./images/boxes-mobile-450.jpg 1x,
+                      ./images/boxes-mobile-900.jpg 2x
+                    "
+                    src="./images/boxes-mobile-450.jpg"
                     alt="Приложение"
-                    width="370"
+                    width="450"
                     height="294"
                     class="products__image"
                   />
@@ -219,9 +276,13 @@
               <a href="" class="card-set__link">
                 <div class="product">
                   <img
-                    src="./images/inspiration-has-no-borders.jpg"
+                    srcset="
+                      ./images/inspiration-mobile-450.jpg 1x,
+                      ./images/inspiration-mobile-900.jpg 2x
+                    "
+                    src="./images/inspiration-mobile-450.jpg"
                     alt="Веб-сайт"
-                    width="370"
+                    width="450"
                     height="294"
                     class="products__image"
                   />
@@ -244,9 +305,13 @@
               <a href="" class="card-set__link">
                 <div class="product">
                   <img
-                    src="./images/limited-edition.jpg"
+                    srcset="
+                      ./images/limited-mobile-450.jpg 1x,
+                      ./images/limited-mobile-900.jpg 2x
+                    "
+                    src="./images/limited-mobile-450.jpg"
                     alt="Дизайн"
-                    width="370"
+                    width="450"
                     height="294"
                     class="products__image"
                   />
@@ -269,9 +334,13 @@
               <a href="" class="card-set__link">
                 <div class="product">
                   <img
-                    src="./images/lab.jpg"
+                    srcset="
+                      ./images/lab-mobile-450.jpg 1x,
+                      ./images/lab-mobile-900.jpg 2x
+                    "
+                    src="./images/lab-mobile-450.jpg"
                     alt="Маркетинг"
-                    width="370"
+                    width="450"
                     height="294"
                     class="products__image"
                   />
@@ -294,9 +363,13 @@
               <a href="" class="card-set__link">
                 <div class="product">
                   <img
-                    src="./images/growing-business.jpg"
+                    srcset="
+                      ./images/growing-mobile-450.jpg 1x,
+                      ./images/growing-mobile-900.jpg 2x
+                    "
+                    src="./images/growing-mobile-450.jpg"
                     alt="Приложение"
-                    width="370"
+                    width="450"
                     height="294"
                     class="products__image"
                   />
@@ -424,5 +497,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

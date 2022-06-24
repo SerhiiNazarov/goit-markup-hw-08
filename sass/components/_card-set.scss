@@ -7,7 +7,9 @@
 }
 
 .card-set__item {
-  flex-basis: calc(100% / 3 - 30px);
+  // flex-basis: calc(100% / 3 - 30px);
+  flex-basis: 100%;
+
   margin: 15px;
 }
 

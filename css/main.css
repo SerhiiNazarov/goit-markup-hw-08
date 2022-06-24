@@ -1,4 +1,4 @@
-.site-nav, .contacts, .features, .works, .team-member, .list-icons, .clients, .address {
+.site-nav, .contacts, .soc-header, .features, .works, .team-member, .list-icons, .clients, .address {
   list-style: none;
   padding-left: 0;
   margin-top: 0;
@@ -345,6 +345,12 @@ body.modal-open {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    width: 768px;
+  }
+}
+
 .logo {
   color: #2196f3;
   font-size: 24px;
@@ -362,7 +368,7 @@ body.modal-open {
   color: #ffffff;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
   .logo {
     font-size: 26px;
     line-height: 1.19;
@@ -372,15 +378,17 @@ body.modal-open {
 .menu {
   background-color: #ffffff;
   padding: 0;
+  z-index: 2;
 }
 
 @media screen and (max-width: 767px) {
   .menu {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
   }
   .menu.is-open {
     display: block;
@@ -396,6 +404,8 @@ body.modal-open {
 }
 
 .menu__btn {
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -404,6 +414,10 @@ body.modal-open {
   margin: 10px 0;
   background-color: transparent;
   z-index: 3;
+}
+
+.menu__btn:hover, .menu__btn:focus {
+  fill: #2196f3;
 }
 
 @media screen and (min-width: 768px) {
@@ -428,8 +442,25 @@ body.modal-open {
   width: 100%;
   padding-top: 48px;
   padding-left: 40px;
+  padding-right: 40px;
   background-color: #ffffff;
   margin-bottom: 305px;
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 0;
+    padding: 0;
+  }
 }
 
 .site-nav__link {
@@ -445,8 +476,28 @@ body.modal-open {
   color: #2196f3;
 }
 
+@media screen and (min-width: 768px) {
+  .site-nav__link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 32px 0;
+  }
+}
+
 .site-nav__item:not(:last-child) {
   margin-bottom: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav__item:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 50px;
+  }
 }
 
 .site-nav__link--activ {
@@ -462,6 +513,23 @@ body.modal-open {
   -ms-flex-wrap: wrap-reverse;
       flex-wrap: wrap-reverse;
   padding-left: 40px;
+  padding-right: 40px;
+  margin-bottom: 64px;
+}
+
+@media screen and (max-width: 767px) {
+  .contacts {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts {
+    display: block;
+    padding: 0;
+    margin-left: 84px;
+    margin-bottom: 0;
+  }
 }
 
 .contacts__icon {
@@ -473,22 +541,50 @@ body.modal-open {
   fill: currentColor;
 }
 
-.contacts__link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+@media screen and (min-width: 768px) {
+  .contacts__icon {
+    display: block;
+  }
+}
+
+.contacts__item:nth-child(even) {
   font-weight: 500;
   font-size: 34px;
   line-height: 1.18;
   letter-spacing: 0.02em;
+  margin-bottom: 32px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts__item:nth-child(even) {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+}
+
+.contacts__item:nth-child(odd) {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts__item:nth-child(odd) {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+}
+
+.contacts__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
   border: none;
   color: #757575;
@@ -498,15 +594,56 @@ body.modal-open {
   color: #2196f3;
 }
 
+.soc-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .soc-header {
+    display: none;
+  }
+}
+
+.soc-header__item:not(:last-child) {
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.soc-header__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: #757575;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.soc-header__link:hover, .soc-header__link:focus {
+  color: #2196f3;
+}
+
 .hero__overlay {
   width: 480px;
   height: 400px;
   margin-right: auto;
   margin-left: auto;
   padding: 118px 0;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/overlay.jpg");
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/overlay.jpg");
-  background-size: cover;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("/images/overlay-mobile-480.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("/images/overlay-mobile-480.jpg");
+  background-size: 480px 400px;
+}
+
+@media screen and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero__overlay {
+    background-image: url("/images/overlay-mobile-960.jpg");
+  }
 }
 
 .hero {
