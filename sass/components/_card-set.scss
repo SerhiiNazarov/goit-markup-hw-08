@@ -3,6 +3,7 @@
 
   display: flex;
   flex-wrap: wrap;
+
   margin: -15px;
 }
 
@@ -11,10 +12,15 @@
   flex-basis: 100%;
 
   margin: 15px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-basis: calc((100% - 60px) / 2);
+  }
 }
 
 .card-set__link {
   @include transition($type: box-shadow);
+  height: 100%;
 
   color: inherit;
   display: block;

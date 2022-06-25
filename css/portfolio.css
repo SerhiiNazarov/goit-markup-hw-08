@@ -459,7 +459,25 @@ body.modal-open {
 }
 
 .site-nav__link--activ {
+  position: relative;
   color: #2196f3;
+}
+
+.site-nav__link--activ::after {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #2196f3;
+}
+
+@media screen and (min-width: 768px) {
+  .site-nav__link--activ::after {
+    display: block;
+  }
 }
 
 .contacts {
@@ -517,6 +535,7 @@ body.modal-open {
   .contacts__item:nth-child(even) {
     font-size: 12px;
     margin-bottom: 0;
+    margin-bottom: 21px;
   }
 }
 
@@ -531,6 +550,7 @@ body.modal-open {
   .contacts__item:nth-child(odd) {
     font-size: 12px;
     margin-bottom: 10px;
+    margin-top: 21px;
   }
 }
 
@@ -651,7 +671,6 @@ body.modal-open {
 }
 
 .filters {
-  margin-bottom: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -659,9 +678,27 @@ body.modal-open {
       flex-wrap: wrap;
 }
 
+@media screen and (min-width: 768px) {
+  .filters {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 50px;
+  }
+}
+
+.filters__item {
+  margin-bottom: 15px;
+}
+
 .filters__item:not(:last-child) {
   margin-right: 8px;
-  margin-bottom: 15px;
 }
 
 .filters__butoon {
@@ -725,11 +762,19 @@ body.modal-open {
   margin: 15px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .card-set__item {
+    -ms-flex-preferred-size: calc((100% - 60px) / 2);
+        flex-basis: calc((100% - 60px) / 2);
+  }
+}
+
 .card-set__link {
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
   color: inherit;
   display: block;
   text-decoration: none;
@@ -855,6 +900,16 @@ body.modal-open {
   text-align: center;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .page-footer__address-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
 .address {
   margin-top: 20px;
   margin-bottom: 60px;
@@ -910,6 +965,8 @@ body.modal-open {
 
 .subscription {
   margin-left: auto;
+  margin-right: auto;
+  width: 450px;
 }
 
 .subscription__title {

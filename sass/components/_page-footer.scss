@@ -9,3 +9,10 @@
     // display: flex;
   }
 }
+
+.page-footer__address-social {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    justify-content: space-around;
+  }
+}
