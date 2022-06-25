@@ -1,12 +1,10 @@
 .site-nav {
-  width: 100%;
   padding-top: 48px;
   padding-left: 40px;
   padding-right: 40px;
 
   @extend %list-style;
   background-color: $main-bg-color;
-  // margin-left: 93px;
 
   margin-bottom: 305px;
 
@@ -14,6 +12,10 @@
     @include centeredflex;
     margin-bottom: 0;
     padding: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
   }
 }
 
@@ -38,8 +40,6 @@
 }
 
 .site-nav__item {
-  // position: relative;
-
   &:not(:last-child) {
     margin-bottom: 32px;
 
