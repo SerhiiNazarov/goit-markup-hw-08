@@ -1,6 +1,10 @@
 .page-header {
   position: relative;
   border-bottom: 1px solid #ececec;
+
+  @media screen and (max-width: 480px) {
+    width: 480px;
+  }
 }
 
 .page-header__nav {

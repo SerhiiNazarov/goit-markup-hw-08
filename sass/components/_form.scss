@@ -1,7 +1,10 @@
 .form {
   text-align: start;
   width: 370px;
-  // width: 448px;
+
+  @media screen and (min-width: 1200px) {
+    width: 448px;
+  }
 }
 
 .form__title {
@@ -117,7 +120,6 @@
 }
 
 .form__label[for="policy"] {
-  // @extend %fonts-text;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
@@ -126,6 +128,10 @@
 
   margin: 0;
   letter-spacing: 0.03em;
+
+  @media screen and (min-width: 1200px) {
+    @include fonts__site-nav-contacts;
+  }
 }
 
 .form__checkbox-icon {

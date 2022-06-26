@@ -1,6 +1,11 @@
 .social {
   margin-bottom: 60px;
   // margin-left: 70px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+    margin-left: 70px;
+  }
 }
 
 .social__link {

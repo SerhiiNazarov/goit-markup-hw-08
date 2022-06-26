@@ -10,9 +10,13 @@
 .product__overlay {
   @include transition($type: transform);
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  padding: 63px 24px;
   height: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
 
   background-color: rgba(33, 150, 243, 0.9);
 
@@ -35,6 +39,7 @@
 }
 
 .product__meta {
+  flex-grow: 1;
   padding-top: 20px;
   padding-right: 24px;
   padding-bottom: 24px;
@@ -46,6 +51,7 @@
 }
 
 .product__title {
+  flex-grow: 1;
   @extend %indentations;
 
   font-size: 18px;
@@ -54,8 +60,8 @@
 }
 
 .product__name {
+  flex-grow: 2;
   @extend %indentations;
-
   margin-top: 4px;
 
   color: $primary-text-color;

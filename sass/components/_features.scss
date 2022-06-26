@@ -1,11 +1,15 @@
 .features {
   @extend %list-style;
 
-  // display: flex;
-
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: nowrap;
     margin: -15px;
   }
 }
@@ -27,12 +31,15 @@
     width: 354px;
     margin: 15px;
   }
+
+  @media screen and (min-width: 1200px) {
+    width: 354px;
+    margin: 15px;
+  }
 }
 
 .features__icon {
   @include centeredflex();
-  // width: 270px;
-  // height: 120px;
   width: 450px;
   height: 120px;
 
@@ -42,7 +49,10 @@
 
   @media screen and (min-width: 768px) {
     width: 354px;
-    height: 251px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 270px;
   }
 }
 
