@@ -1,11 +1,7 @@
 .site-nav {
-  padding-top: 48px;
-  padding-left: 40px;
-  padding-right: 40px;
-
   @extend %list-style;
-  background-color: $main-bg-color;
 
+  background-color: $main-bg-color;
   margin-bottom: 305px;
 
   @media screen and (min-width: 768px) {

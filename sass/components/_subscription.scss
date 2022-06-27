@@ -1,10 +1,8 @@
 .subscription {
   margin-left: auto;
   margin-right: auto;
-  width: 450px;
 
   @media screen and (min-width: 1200px) {
-    width: 570px;
     margin-right: 0;
   }
 }
@@ -15,31 +13,43 @@
 
   margin-bottom: 20px;
   color: $main-bg-color;
+
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
 }
 
 .subscription__form {
   background-color: transparent;
 }
 
-.subscriptio__form-field {
+.subscription__form-field {
   display: inline-block;
 }
 
 .subscription__input[type="email"] {
   @include transition($type: border);
 
-  width: 100%;
-  // width: 358px;
+  width: 450px;
   height: 50px;
   padding-left: 16px;
   padding-right: 16px;
-  // margin-right: 12px;
   margin-bottom: 20px;
   color: $main-bg-color;
 
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: block;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-bottom: 0;
+    margin-right: 12px;
+  }
 }
 
 .subscription__input:hover,

@@ -23,7 +23,7 @@
   line-height: 1.71;
 }
 
-.works__title, .social__title, .subscription__title {
+.features__title, .works__title, .social__title, .subscription__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -389,21 +389,21 @@ body.modal-open {
 
 .menu {
   background-color: #ffffff;
-  padding: 0;
+  padding: 48px 40px;
   z-index: 2;
 }
 
 @media screen and (max-width: 767px) {
   .menu {
     display: none;
+  }
+  .menu.is-open {
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-  }
-  .menu.is-open {
-    display: block;
   }
 }
 
@@ -412,6 +412,7 @@ body.modal-open {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding: 0;
   }
 }
 
@@ -461,9 +462,6 @@ body.modal-open {
 }
 
 .site-nav {
-  padding-top: 48px;
-  padding-left: 40px;
-  padding-right: 40px;
   background-color: #ffffff;
   margin-bottom: 305px;
 }
@@ -550,15 +548,13 @@ body.modal-open {
 }
 
 .contacts {
-  background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap-reverse;
       flex-wrap: wrap-reverse;
-  padding-left: 40px;
-  padding-right: 40px;
   margin-bottom: 64px;
+  background-color: #ffffff;
 }
 
 @media screen and (max-width: 767px) {
@@ -570,7 +566,6 @@ body.modal-open {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .contacts {
     display: block;
-    padding: 0;
     margin-left: 84px;
     margin-bottom: 0;
   }
@@ -609,11 +604,14 @@ body.modal-open {
   }
 }
 
-.contacts__item:nth-child(even) {
+.contacts__item {
   font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.contacts__item:nth-child(even) {
   font-size: 34px;
   line-height: 1.18;
-  letter-spacing: 0.02em;
   margin-bottom: 32px;
 }
 
@@ -639,10 +637,8 @@ body.modal-open {
 }
 
 .contacts__item:nth-child(odd) {
-  font-weight: 500;
   font-size: 24px;
   line-height: 1.17;
-  letter-spacing: 0.02em;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -697,8 +693,6 @@ body.modal-open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-left: 40px;
-  padding-right: 40px;
 }
 
 @media screen and (min-width: 768px) {
@@ -882,7 +876,7 @@ body.modal-open {
 
 @media screen and (min-width: 1200px) {
   .modal {
-    min-width: 528px;
+    width: 528px;
   }
 }
 
@@ -926,12 +920,12 @@ body.modal-open {
 
 .form {
   text-align: start;
-  width: 370px;
+  min-width: 370px;
 }
 
 @media screen and (min-width: 1200px) {
   .form {
-    width: 448px;
+    min-width: 448px;
   }
 }
 
@@ -1080,9 +1074,6 @@ body.modal-open {
 }
 
 .form__label[for="policy"] {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1092,19 +1083,18 @@ body.modal-open {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
   margin: 0;
   letter-spacing: 0.03em;
 }
 
 @media screen and (min-width: 1200px) {
   .form__label[for="policy"] {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-    -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    line-height: 1.71;
   }
 }
 
@@ -1155,6 +1145,14 @@ body.modal-open {
   line-height: 1.18;
 }
 
+@media screen and (min-width: 1200px) {
+  .section__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .features {
     display: -webkit-box;
@@ -1168,12 +1166,8 @@ body.modal-open {
 
 @media screen and (min-width: 1200px) {
   .features {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-    margin: -15px;
   }
 }
 
@@ -1196,8 +1190,7 @@ body.modal-open {
 
 @media screen and (min-width: 1200px) {
   .features__item {
-    width: 354px;
-    margin: 15px;
+    width: 270px;
   }
 }
 
@@ -1232,10 +1225,6 @@ body.modal-open {
 
 .features__title {
   margin-bottom: 10px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
 }
 
 @media screen and (max-width: 767px) {
@@ -1326,6 +1315,7 @@ body.modal-open {
     -ms-flex-preferred-size: calc(100% / 4 - 30px);
         flex-basis: calc(100% / 4 - 30px);
     margin: 15px;
+    padding-bottom: 30px;
   }
 }
 
@@ -1563,12 +1553,10 @@ body.modal-open {
 .subscription {
   margin-left: auto;
   margin-right: auto;
-  width: 450px;
 }
 
 @media screen and (min-width: 1200px) {
   .subscription {
-    width: 570px;
     margin-right: 0;
   }
 }
@@ -1578,18 +1566,24 @@ body.modal-open {
   color: #ffffff;
 }
 
+@media screen and (min-width: 1200px) {
+  .subscription__title {
+    text-align: start;
+  }
+}
+
 .subscription__form {
   background-color: transparent;
 }
 
-.subscriptio__form-field {
+.subscription__form-field {
   display: inline-block;
 }
 
 .subscription__input[type="email"] {
   -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  width: 100%;
+  width: 450px;
   height: 50px;
   padding-left: 16px;
   padding-right: 16px;
@@ -1598,6 +1592,20 @@ body.modal-open {
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .subscription__input[type="email"] {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscription__input[type="email"] {
+    width: 358px;
+    margin-bottom: 0;
+    margin-right: 12px;
+  }
 }
 
 .subscription__input:hover,
