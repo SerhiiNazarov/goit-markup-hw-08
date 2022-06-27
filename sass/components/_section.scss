@@ -12,10 +12,6 @@
 
   &__team {
     background-color: $primary-bg-color;
-
-    @media screen and (max-width: 480px) {
-      width: 480px;
-    }
   }
 }
 

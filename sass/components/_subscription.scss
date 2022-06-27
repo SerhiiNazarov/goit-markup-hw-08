@@ -30,7 +30,7 @@
 .subscription__input[type="email"] {
   @include transition($type: border);
 
-  width: 450px;
+  width: 100%;
   height: 50px;
   padding-left: 16px;
   padding-right: 16px;
@@ -43,6 +43,7 @@
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: block;
+    width: 450px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -59,7 +60,6 @@
 
 .subscription__button {
   @include centeredflex(inline-flex);
-  min-width: 200px;
   height: 50px;
   padding: 10px 28px;
 }
