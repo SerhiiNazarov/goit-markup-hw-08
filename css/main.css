@@ -551,12 +551,6 @@ body.modal-open {
   background-color: #ffffff;
 }
 
-@media screen and (max-width: 767px) {
-  .contacts {
-    width: 480px;
-  }
-}
-
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .contacts {
     display: block;
@@ -687,6 +681,8 @@ body.modal-open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media screen and (min-width: 768px) {
@@ -839,7 +835,7 @@ body.modal-open {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 450px;
+  width: 100%;
   padding: 40px;
   background: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -854,6 +850,12 @@ body.modal-open {
           transform: scale(0.9) translate(-50%, -50%);
 }
 
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 480px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
@@ -864,8 +866,7 @@ body.modal-open {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 200px;
-  height: 50px;
+  padding: 10px 55px;
   margin-top: 20px;
   outline: none;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -900,7 +901,7 @@ body.modal-open {
 
 .form {
   text-align: start;
-  min-width: 370px;
+  width: 100%;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1337,8 +1338,7 @@ body.modal-open {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 44px;
-  height: 44px;
+  padding: 12px;
   border-radius: 50%;
   text-decoration: none;
   color: #afb1b8;

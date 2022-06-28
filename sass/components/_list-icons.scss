@@ -10,8 +10,7 @@
 .list-icons__link {
   @include transition($type: background-color);
   @include centeredflex();
-  width: 44px;
-  height: 44px;
+  padding: 12px;
   border-radius: 50%;
   text-decoration: none;
 

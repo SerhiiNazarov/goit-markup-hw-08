@@ -512,12 +512,6 @@ body.modal-open {
   background-color: #ffffff;
 }
 
-@media screen and (max-width: 767px) {
-  .contacts {
-    width: 480px;
-  }
-}
-
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .contacts {
     display: block;
@@ -722,6 +716,8 @@ body.modal-open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 @media screen and (min-width: 768px) {
@@ -994,8 +990,7 @@ body.modal-open {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 44px;
-  height: 44px;
+  padding: 12px;
   border-radius: 50%;
   text-decoration: none;
   color: #afb1b8;
