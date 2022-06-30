@@ -1,6 +1,7 @@
 .list-icons {
   @extend %list-style;
   @include centeredflex();
+  margin-bottom: 24px;
 }
 
 .list-icons__item:not(:last-child) {

@@ -3,6 +3,11 @@
   display: flex;
   flex-wrap: wrap;
 
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    top: 90%;
+  }
+
   @media screen and (min-width: 768px) {
     display: none;
   }

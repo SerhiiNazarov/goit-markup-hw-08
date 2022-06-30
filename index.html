@@ -34,11 +34,11 @@
               height="40"
               aria-label="Переключатель мобильного меню"
             >
+              <use class="menu__icon-menu" href="./images/icons.svg#menu"></use>
               <use
                 class="menu__icon-cross"
                 href="./images/icons.svg#cross"
               ></use>
-              <use class="menu__icon-menu" href="./images/icons.svg#menu"></use>
             </svg>
           </button>
           <div class="menu" id="menu" data-menu>
@@ -311,17 +311,36 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="team-member">
             <li class="team-member__item">
-              <img
-                srcset="
-                  ./images/teamcard1-mobile-450.jpg 1x,
-                  ./images/teamcard1-mobile-900.jpg 2x
-                "
-                src="./images/teamcard1-mobile-450.jpg"
-                alt="Игорь Демьяненко"
-                width="450"
-                height="460"
-                class="team-member__image"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/teamcard1-desktop-270.jpg 1x,
+                    ./images/teamcard1-desktop-540.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/teamcard1-tablet_354.jpg 1x,
+                    ./images/teamcard1-tablet_708.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/teamcard1-mobile-450.jpg 1x,
+                    ./images/teamcard1-mobile-900.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  src="./images/teamcard1-mobile-450.jpg"
+                  alt="Игорь Демьяненко"
+                  width="450"
+                  height="460"
+                  class="team-member__image"
+                />
+              </picture>
               <h3 class="team-member__name">Игорь Демьяненко</h3>
               <p class="team-member__position">Product Designer</p>
               <ul class="list-icons">
@@ -356,17 +375,36 @@
               </ul>
             </li>
             <li class="team-member__item">
-              <img
-                srcset="
-                  ./images/teamcard2-mobile-450.jpg 1x,
-                  ./images/teamcard2-mobile-900.jpg 2x
-                "
-                src="./images/teamcard2-mobile-450.jpg"
-                alt="Ольга Репина"
-                width="450"
-                height="460"
-                class="team-member__image"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/teamcard2-desktop-270.jpg 1x,
+                    ./images/teamcard2-desktop-540.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/teamcard2-tablet_354.jpg 1x,
+                    ./images/teamcard2-tablet_708.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/teamcard2-mobile-450.jpg 1x,
+                    ./images/teamcard2-mobile-900.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  src="./images/teamcard2-mobile-450.jpg"
+                  alt="Ольга Репина"
+                  width="450"
+                  height="460"
+                  class="team-member__image"
+                />
+              </picture>
               <h3 class="team-member__name">Ольга Репина</h3>
               <p class="team-member__position">Frontend Developer</p>
 
@@ -402,17 +440,36 @@
               </ul>
             </li>
             <li class="team-member__item">
-              <img
-                srcset="
-                  ./images/teamcard3-mobile-450.jpg 1x,
-                  ./images/teamcard3-mobile-900.jpg 2x
-                "
-                src="./images/teamcard3-mobile-450.jpg"
-                alt="Николай Тарасов"
-                width="450"
-                height="460"
-                class="team-member__image"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/teamcard3-desktop-270.jpg 1x,
+                    ./images/teamcard3-desktop-540.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/teamcard3-tablet_354.jpg 1x,
+                    ./images/teamcard3-tablet_708.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/teamcard3-mobile-450.jpg 1x,
+                    ./images/teamcard3-mobile-900.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  src="./images/teamcard3-mobile-450.jpg"
+                  alt="Николай Тарасов"
+                  width="450"
+                  height="460"
+                  class="team-member__image"
+                />
+              </picture>
               <h3 class="team-member__name">Николай Тарасов</h3>
               <p class="team-member__position">Marketing</p>
 
@@ -448,17 +505,36 @@
               </ul>
             </li>
             <li class="team-member__item">
-              <img
-                srcset="
-                  ./images/teamcard4-mobile-450.jpg 1x,
-                  ./images/teamcard4-mobile-900.jpg 2x
-                "
-                src="./images/teamcard4-mobile-450.jpg"
-                alt="Михаил Ермаков"
-                width="450"
-                height="460"
-                class="team-member__image"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/teamcard4-desktop-270.jpg 1x,
+                    ./images/teamcard4-desktop-540.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/teamcard4-tablet_354.jpg 1x,
+                    ./images/teamcard4-tablet_708.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/teamcard4-mobile-450.jpg 1x,
+                    ./images/teamcard4-mobile-900.jpg 2x
+                  "
+                  media="(min-width: 480px)"
+                />
+                <img
+                  src="./images/teamcard4-mobile-450.jpg"
+                  alt="Михаил Ермаков"
+                  width="450"
+                  height="460"
+                  class="team-member__image"
+                />
+              </picture>
               <h3 class="team-member__name">Михаил Ермаков</h3>
               <p class="team-member__position">UI Designer</p>
 
