@@ -57,38 +57,40 @@
                 <a href="" class="site-nav__link">Контакты</a>
               </li>
             </ul>
-            <ul class="contacts">
-              <li class="contacts__item">
-                <a href="mailto:info@devstudio.com" class="contacts__link">
-                  <svg class="contacts__icon-mail" width="16" height="12">
-                    <use href="./images/icons.svg#mail"></use>
-                  </svg>
-                  info@devstudio.com</a
-                >
-              </li>
-              <li class="contacts__item">
-                <a href="tel:+380961111111" class="contacts__link">
-                  <svg class="contacts__icon-tel" width="10" height="16">
-                    <use href="./images/icons.svg#phone"></use>
-                  </svg>
-                  +38 096 111 11 11</a
-                >
-              </li>
-            </ul>
-            <ul class="soc-header">
-              <li class="soc-header__item">
-                <a href="" class="soc-header__link"> Instagram </a>
-              </li>
-              <li class="soc-header__item">
-                <a href="" class="soc-header__link"> Twitter </a>
-              </li>
-              <li class="soc-header__item">
-                <a href="" class="soc-header__link"> Facebook </a>
-              </li>
-              <li class="soc-header__item">
-                <a href="" class="soc-header__link"> LinkedIn </a>
-              </li>
-            </ul>
+            <div>
+              <ul class="contacts">
+                <li class="contacts__item">
+                  <a href="mailto:info@devstudio.com" class="contacts__link">
+                    <svg class="contacts__icon-mail" width="16" height="12">
+                      <use href="./images/icons.svg#mail"></use>
+                    </svg>
+                    info@devstudio.com</a
+                  >
+                </li>
+                <li class="contacts__item">
+                  <a href="tel:+380961111111" class="contacts__link">
+                    <svg class="contacts__icon-tel" width="10" height="16">
+                      <use href="./images/icons.svg#phone"></use>
+                    </svg>
+                    +38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+              <ul class="soc-header">
+                <li class="soc-header__item">
+                  <a href="" class="soc-header__link"> Instagram </a>
+                </li>
+                <li class="soc-header__item">
+                  <a href="" class="soc-header__link"> Twitter </a>
+                </li>
+                <li class="soc-header__item">
+                  <a href="" class="soc-header__link"> Facebook </a>
+                </li>
+                <li class="soc-header__item">
+                  <a href="" class="soc-header__link"> LinkedIn </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </nav>
       </div>
@@ -123,17 +125,37 @@
             <li class="card-set__item">
               <a href="" class="card-set__link">
                 <div class="product">
-                  <img
-                    srcset="
-                      ./images/technoquack-mobile-450.jpg 1x,
-                      ./images/technoquack-mobile-900.jpg 2x
-                    "
-                    src="./images/technoquack-mobile-450.jpg"
-                    alt="Веб-сайт"
-                    width="450"
-                    height="294"
-                    class="products__image"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/technoquack-desktop-370.jpg 1x,
+                        ./images/technoquack-desktop-740.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/technoquack-tablet-354.jpg 1x,
+                        ./images/technoquack-tablet-708.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/technoquack-mobile-450.jpg 1x,
+                        ./images/technoquack-mobile-900.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/technoquack-mobile-450.jpg"
+                      alt="Веб-сайт"
+                      width="450"
+                      height="294"
+                      class="products__image"
+                    />
+                  </picture>
+
                   <div class="product__overlay">
                     <p class="product__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -152,17 +174,37 @@
             <li class="card-set__item">
               <a href="" class="card-set__link">
                 <div class="product">
-                  <img
-                    srcset="
-                      ./images/neworlean-mobile-450.jpg 1x,
-                      ./images/neworlean-mobile-900.jpg 2x
-                    "
-                    src="./images/neworlean-mobile-450.jpg"
-                    alt="Дизайн"
-                    width="450"
-                    height="294"
-                    class="products__image"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/neworlean-desktop-370.jpg 1x,
+                        ./images/neworlean-desktop-740.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/neworlean-tablet-354.jpg 1x,
+                        ./images/neworlean-tablet-708.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/neworlean-mobile-450.jpg 1x,
+                        ./images/neworlean-mobile-900.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/neworlean-mobile-450.jpg"
+                      alt="Дизайн"
+                      width="450"
+                      height="294"
+                      class="products__image"
+                    />
+                  </picture>
+
                   <div class="product__overlay">
                     <p class="product__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -183,17 +225,37 @@
             <li class="card-set__item">
               <a href="" class="card-set__link">
                 <div class="product">
-                  <img
-                    srcset="
-                      ./images/seafood-mobile-450.jpg 1x,
-                      ./images/seafood-mobile-900.jpg 2x
-                    "
-                    src="./images/seafood-mobile-450.jpg"
-                    alt="Приложение"
-                    width="450"
-                    height="294"
-                    class="products__image"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/seafood-desktop-370.jpg 1x,
+                        ./images/seafood-desktop-740.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/seafood-tablet-354.jpg 1x,
+                        ./images/seafood-tablet-708.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/seafood-mobile-450.jpg 1x,
+                        ./images/seafood-mobile-900.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/seafood-mobile-450.jpg"
+                      alt="Приложение"
+                      width="450"
+                      height="294"
+                      class="products__image"
+                    />
+                  </picture>
+
                   <div class="product__overlay">
                     <p class="product__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -212,17 +274,37 @@
             <li class="card-set__item">
               <a href="" class="card-set__link">
                 <div class="product">
-                  <img
-                    srcset="
-                      ./images/prime-mobile-450.jpg 1x,
-                      ./images/prime-mobile-900.jpg 2x
-                    "
-                    src="./images/prime-mobile-450.jpg"
-                    alt="Маркетинг"
-                    width="450"
-                    height="294"
-                    class="products__image"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/prime-desktop-370.jpg 1x,
+                        ./images/prime-desktop-740.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/prime-tablet-354.jpg 1x,
+                        ./images/prime-tablet-708.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/prime-mobile-450.jpg 1x,
+                        ./images/prime-mobile-900.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/prime-mobile-450.jpg"
+                      alt="Маркетинг"
+                      width="450"
+                      height="294"
+                      class="products__image"
+                    />
+                  </picture>
+
                   <div class="product__overlay">
                     <p class="product__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -241,17 +323,37 @@
             <li class="card-set__item">
               <a href="" class="card-set__link">
                 <div class="product">
-                  <img
-                    srcset="
-                      ./images/boxes-mobile-450.jpg 1x,
-                      ./images/boxes-mobile-900.jpg 2x
-                    "
-                    src="./images/boxes-mobile-450.jpg"
-                    alt="Приложение"
-                    width="450"
-                    height="294"
-                    class="products__image"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/boxes-desktop-370.jpg 1x,
+                        ./images/boxes-desktop-740.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/boxes-tablet-354.jpg 1x,
+                        ./images/boxes-tablet-708.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/boxes-mobile-450.jpg 1x,
+                        ./images/boxes-mobile-900.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/boxes-mobile-450.jpg"
+                      alt="Приложение"
+                      width="450"
+                      height="294"
+                      class="products__image"
+                    />
+                  </picture>
+
                   <div class="product__overlay">
                     <p class="product__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -270,17 +372,37 @@
             <li class="card-set__item">
               <a href="" class="card-set__link">
                 <div class="product">
-                  <img
-                    srcset="
-                      ./images/inspiration-mobile-450.jpg 1x,
-                      ./images/inspiration-mobile-900.jpg 2x
-                    "
-                    src="./images/inspiration-mobile-450.jpg"
-                    alt="Веб-сайт"
-                    width="450"
-                    height="294"
-                    class="products__image"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/inspiration-desktop-370.jpg 1x,
+                        ./images/inspiration-desktop-740.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/inspiration-tablet-354.jpg 1x,
+                        ./images/inspiration-tablet-708.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/inspiration-mobile-450.jpg 1x,
+                        ./images/inspiration-mobile-900.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/inspiration-mobile-450.jpg"
+                      alt="Веб-сайт"
+                      width="450"
+                      height="294"
+                      class="products__image"
+                    />
+                  </picture>
+
                   <div class="product__overlay">
                     <p class="product__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -299,17 +421,37 @@
             <li class="card-set__item">
               <a href="" class="card-set__link">
                 <div class="product">
-                  <img
-                    srcset="
-                      ./images/limited-mobile-450.jpg 1x,
-                      ./images/limited-mobile-900.jpg 2x
-                    "
-                    src="./images/limited-mobile-450.jpg"
-                    alt="Дизайн"
-                    width="450"
-                    height="294"
-                    class="products__image"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/limited-desktop-370.jpg 1x,
+                        ./images/limited-desktop-740.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/limited-tablet-354.jpg 1x,
+                        ./images/limited-tablet-708.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/limited-mobile-450.jpg 1x,
+                        ./images/limited-mobile-900.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/limited-mobile-450.jpg"
+                      alt="Дизайн"
+                      width="450"
+                      height="294"
+                      class="products__image"
+                    />
+                  </picture>
+
                   <div class="product__overlay">
                     <p class="product__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -328,17 +470,37 @@
             <li class="card-set__item">
               <a href="" class="card-set__link">
                 <div class="product">
-                  <img
-                    srcset="
-                      ./images/lab-mobile-450.jpg 1x,
-                      ./images/lab-mobile-900.jpg 2x
-                    "
-                    src="./images/lab-mobile-450.jpg"
-                    alt="Маркетинг"
-                    width="450"
-                    height="294"
-                    class="products__image"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/lab-desktop-370.jpg 1x,
+                        ./images/lab-desktop-740.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/lab-tablet-354.jpg 1x,
+                        ./images/lab-tablet-708.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/lab-mobile-450.jpg 1x,
+                        ./images/lab-mobile-900.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/lab-mobile-450.jpg"
+                      alt="Маркетинг"
+                      width="450"
+                      height="294"
+                      class="products__image"
+                    />
+                  </picture>
+
                   <div class="product__overlay">
                     <p class="product__text">
                       Ресурс предлагает комплексные предложения с разным уровнем
@@ -357,17 +519,37 @@
             <li class="card-set__item">
               <a href="" class="card-set__link">
                 <div class="product">
-                  <img
-                    srcset="
-                      ./images/growing-mobile-450.jpg 1x,
-                      ./images/growing-mobile-900.jpg 2x
-                    "
-                    src="./images/growing-mobile-450.jpg"
-                    alt="Приложение"
-                    width="450"
-                    height="294"
-                    class="products__image"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/growing-desktop-370.jpg 1x,
+                        ./images/growing-desktop-740.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/growing-tablet-354.jpg 1x,
+                        ./images/growing-tablet-708.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/growing-mobile-450.jpg 1x,
+                        ./images/growing-mobile-900.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      src="./images/growing-mobile-450.jpg"
+                      alt="Приложение"
+                      width="450"
+                      height="294"
+                      class="products__image"
+                    />
+                  </picture>
+
                   <div class="product__overlay">
                     <p class="product__text">
                       Ресурс предлагает комплексные предложения с разным уровнем

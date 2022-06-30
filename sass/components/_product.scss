@@ -36,6 +36,10 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
+
+  @media screen and (max-width: 352px) {
+    font-size: 16px;
+  }
 }
 
 .product__meta {

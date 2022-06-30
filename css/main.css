@@ -334,6 +334,7 @@ body.modal-open {
 }
 
 .container {
+  position: relative;
   padding: 0 15px;
   margin: 0 auto;
   width: 100%;
@@ -388,10 +389,6 @@ body.modal-open {
 }
 
 .menu {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   background-color: #ffffff;
   padding: 48px 40px;
   z-index: 2;
@@ -402,12 +399,21 @@ body.modal-open {
     display: none;
   }
   .menu.is-open {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
   }
 }
 
@@ -455,6 +461,10 @@ body.modal-open {
   }
 }
 
+.menu__btn.is-open {
+  position: absolute;
+}
+
 .menu__icon-menu {
   display: none;
 }
@@ -486,8 +496,6 @@ body.modal-open {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-bottom: 0;
-    padding: 0;
   }
 }
 
@@ -564,14 +572,12 @@ body.modal-open {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
-  margin-bottom: 64px;
   background-color: #ffffff;
 }
 
 @media screen and (max-width: 767px) {
   .contacts {
-    position: absolute;
-    top: 70%;
+    margin-bottom: 64px;
   }
 }
 
@@ -579,7 +585,6 @@ body.modal-open {
   .contacts {
     display: block;
     margin-left: 84px;
-    margin-bottom: 0;
   }
 }
 
@@ -598,7 +603,6 @@ body.modal-open {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    margin-bottom: 0;
   }
 }
 
@@ -724,13 +728,6 @@ body.modal-open {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-@media screen and (max-width: 767px) {
-  .soc-header {
-    position: absolute;
-    top: 90%;
-  }
 }
 
 @media screen and (min-width: 768px) {
