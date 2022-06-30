@@ -895,12 +895,6 @@ body.modal-open {
           transform: scale(0.9) translate(-50%, -50%);
 }
 
-@media screen and (max-width: 460px) {
-  .modal {
-    height: 100vh;
-  }
-}
-
 @media screen and (min-width: 480px) {
   .modal {
     width: 480px;
